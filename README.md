@@ -2,28 +2,17 @@
 
 画面を持たない自作スマートウォッチ。外周60個と7セグ4桁などのLED(計92個)と振動だけで表示し、ダイヤル(ロータリーエンコーダ)1つと腕の動きで操作する。
 
-![WristMate_Orbit](docs/images/wristmate_orbit.jpg)
-
-## 写真
-
-| | |
-|---|---|
-| ![正面](docs/images/wrist_front.png) | ![表示の拡大](docs/images/face_closeup.png) |
-| 腕につけたところ | LED の表示 |
-| ![試作の変遷](docs/images/prototypes_oled_lcd_led.jpg) | ![基板の重なり](docs/images/pcb_stack_side.jpg) |
-| 試作3世代(OLED → 円形液晶 → LED) | 基板を重ねた側面 |
-| ![前面パネルの試作](docs/images/front_panel_trials.jpg) | ![システム構成図](docs/images/system_diagram_v4.png) |
-| 前面パネルの作り比べ | システム構成図(v4 / ESP32-C3 SuperMini 時点) |
+![WristMate_Orbit](docs/images/cover.png)
 
 ## 中身
 
 ```
 firmware/WristMate_Orbit/   Arduino スケッチ(本体)
-hardware/v5_XIAO-ESP32S3/   基板 v5(現行)。マイコンは Seeed XIAO ESP32-S3
+hardware/v5_XIAO-ESP32S3_Encoder/  基板 v5(現行)。マイコンは Seeed XIAO ESP32-S3、ロータリーエンコーダ付き
 hardware/v4_ESP32-C3-SuperMini/  基板 v4(旧版)。マイコンは ESP32-C3 SuperMini
 ```
 
-各 `hardware/` には KiCad プロジェクト(`.kicad_pro` / `.kicad_sch` / `.kicad_pcb`)と、JLCPCB 発注用のガーバー・BOM・CPL(`jlcpcb/`)が入っている。
+各 `hardware/` には KiCad プロジェクト(`.kicad_pro` / `.kicad_sch` / `.kicad_pcb`)が入っている。v4 には JLCPCB 発注用のガーバー・BOM・CPL(`jlcpcb/`)もある。v5 のガーバーは KiCad から出力する。
 
 **現行のファームウェアは v5(XIAO ESP32-S3)用。** v4 基板ではピン割り当てが違うのでそのままでは動かない。
 
@@ -78,7 +67,7 @@ arduino-cli compile -b esp32:esp32:XIAO_ESP32S3 firmware/WristMate_Orbit
 | 対象 | ライセンス |
 |---|---|
 | `firmware/`(プログラム) | [MIT](LICENSE) |
-| `hardware/`(回路図・基板)、`docs/images/`(写真・図) | [CC BY 4.0](hardware/LICENSE) |
+| `hardware/`(回路図・基板)、`docs/images/`(画像) | [CC BY 4.0](hardware/LICENSE) |
 | `firmware/WristMate_Orbit/src/HijelHID_BLEKeyboard/` | Apache-2.0(同フォルダの `LICENSE`。元の作者のもの) |
 
 自由に使い、改造し、配布してよい。その際は作者名(Hinata)とライセンスを表示すること。
