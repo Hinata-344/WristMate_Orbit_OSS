@@ -2,7 +2,18 @@
 
 画面を持たない自作スマートウォッチ。外周60個と7セグ4桁などのLED(計92個)と振動だけで表示し、ダイヤル(ロータリーエンコーダ)1つと腕の動きで操作する。
 
-> 一旦プライベート公開用。ライセンスは未設定。
+![WristMate_Orbit](docs/images/wristmate_orbit.jpg)
+
+## 写真
+
+| | |
+|---|---|
+| ![正面](docs/images/wrist_front.png) | ![表示の拡大](docs/images/face_closeup.png) |
+| 腕につけたところ | LED の表示 |
+| ![試作の変遷](docs/images/prototypes_oled_lcd_led.jpg) | ![基板の重なり](docs/images/pcb_stack_side.jpg) |
+| 試作3世代(OLED → 円形液晶 → LED) | 基板を重ねた側面 |
+| ![前面パネルの試作](docs/images/front_panel_trials.jpg) | ![システム構成図](docs/images/system_diagram_v4.png) |
+| 前面パネルの作り比べ | システム構成図(v4 / ESP32-C3 SuperMini 時点) |
 
 ## 中身
 
@@ -61,3 +72,15 @@ arduino-cli compile -b esp32:esp32:XIAO_ESP32S3 firmware/WristMate_Orbit
 - SSID: `WristMate-Orbit` / パスワード: `orbit1234`(`OrbitConfig.h` の `OC_AP_PASS`)。**自分用に作るときは変えること。**
 - メニューの順番と表示、時刻表(駅A/駅Bの平日・休日)、スリープまでの時間、時刻合わせなどを変えられる。
 - 内蔵の時刻表はサンプル。実際の時刻表は設定画面から貼り付ける。
+
+## ライセンス
+
+| 対象 | ライセンス |
+|---|---|
+| `firmware/`(プログラム) | [MIT](LICENSE) |
+| `hardware/`(回路図・基板)、`docs/images/`(写真・図) | [CC BY 4.0](hardware/LICENSE) |
+| `firmware/WristMate_Orbit/src/HijelHID_BLEKeyboard/` | Apache-2.0(同フォルダの `LICENSE`。元の作者のもの) |
+
+自由に使い、改造し、配布してよい。その際は作者名(Hinata)とライセンスを表示すること。
+
+© 2026 Hinata

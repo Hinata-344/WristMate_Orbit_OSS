@@ -1,0 +1,11 @@
+Copyright (c) 2026 Hinata
+
+The hardware design files in this directory (KiCad schematics, PCB layouts,
+Gerber/BOM/CPL files) and the images in `docs/images/` are licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
+You are free to share and adapt them for any purpose, even commercially,
+as long as you give appropriate credit ("WristMate_Orbit by Hinata"),
+provide a link to the license, and indicate if changes were made.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
